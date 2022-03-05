@@ -1,0 +1,26 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/queens/new.css" /> 
+<%- include('../partials/nav') %> 
+
+<main>
+  <h1><%= title %> </h1>
+  <form action="/queens" method="POST">
+    <label>Drag Name:
+      <input type="text" name="dragName">
+      </select>
+    </label><br>
+    <label>City:
+      <input type="text" name="city">
+    </label><br>
+    <label>Season:
+      <input type="number" name="season">
+      </select>
+    </label><br>
+    <label>Episode Eliminated:
+      <input type="number" name="episodeEliminated">
+    </label><br>
+    <button type="submit">Add Queen</button>
+  </form>
+</main>
+
+<%- include('../partials/footer') %> 
