@@ -19,9 +19,12 @@
       href="/queens/new" <%- title === 'Add Queen' ? 'class="active"' : '' %>
     >ADD QUEEN</a>
     <a 
-      href="/queens" <%- title === 'All Queens' ? 'class="active"' : '' %>
+    href="/queens" <%- title === 'All Queens' ? 'class="active"' : '' %>
     >ALL QUEENS</a>
     <% } else { %>
+    <a 
+      href="/queens" <%- title === 'All Queens' ? 'class="active"' : '' %>
+    >ALL QUEENS</a>
       <a href="/auth/google" class="siwg-link">
         <button type="submit" class="siwg">
           <img id="siwg-image" alt="Sign in with Google" />

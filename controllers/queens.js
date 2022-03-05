@@ -21,25 +21,61 @@ function newQueen(req, res) {
 }
 
 function create(req, res) {
-  for(let key in req.body) {
-    if(req.body[key] === '') delete req.body[key]
-  }
-  const queen = new Queen(req.body)
-  queen.save(function(err) {
-    if (err) {
-      return res.redirect('queens/new', 
-      {err:null, title:'Add Queen'})
-    }
-    res.redirect(`/queens/${queen._id}`)
+  req.body.owner = req.user.profile._id
+  Queen.create(req.body)
+  .then(queen => {
+    res.redirect('/queens')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/queens')
   })
 }
 
 function show(req, res) {
-  Queen.findById(req.params.id, function (err, queen) {
+  Queen.findById(req.params.id)
+  .populate("owner")
+  .then(queen => {
     res.render('queens/show', {
       title: 'All About This Queen',
-      queen: queen,
+      queen,
     })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/queens')
+  })
+}
+
+function edit(req, res) {
+  Queen.findById(req.params.id)
+  .then(queen => {
+    res.render('queens/edit', {
+      title: 'Edit Queen',
+      queen
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/queens')
+  })
+}
+
+function update(req, res) {
+  Queen.findById(req.params.id)
+  .then(queen => {
+    if(queen.owner.equals(req.user.profile._id)) {
+      queen.updateOne(req.body, {new: true})
+      .then(() => {
+        res.redirect(`/queens/${queen._id}`)
+      })
+    } else {
+      throw new Error ('NOT AUTHORIZED')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/queens')
   })
 }
 
@@ -48,4 +84,6 @@ export {
   newQueen as new,
   create,
   show,
+  edit,
+  update,
 }

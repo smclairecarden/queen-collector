@@ -2,9 +2,9 @@
 <link rel="stylesheet" href="/stylesheets/queens/show.css" /> 
 <%- include('../partials/nav') %> 
 
-<main>
+
   <h1><%= title %></h1>
-  <section id="detail">
+  <section>
     <div>Drag Name: </div>
     <div><%= queen.dragName %></div>
     <div>City: </div>
@@ -13,7 +13,12 @@
     <div><%= queen.season %></div>
     <div>Episode Eliminated: </div>
     <div><%= queen.episodeEliminated %></div>
-    </section><br>
-</main>
+    <% if (queen.owner.equals(user?.profile._id)) { %>
+      <form action="/queens/<%= queen._id %>/edit" method="GET">
+        <button class="btn" type="submit">Edit this Queen</button>
+      </form>
+    <% } %>
+  </section>
+
 
 <%- include('../partials/footer') %> 
