@@ -24,20 +24,37 @@ body {
   margin: 0;
 }
 
-nav {
-  background-color: white;
-  font-size: 1.6rem;
+body > nav {
+  grid-area: nav;
+  background-color: darkblue;
   display: flex;
-  justify-content: center;
-}
-
-main {
-  display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  padding: 0 20px 0 30px;
+  font-weight: bold;
 }
 
-h1 {
-  font-size: 3.6rem;
+nav > i {
+  width: 34px;
+  object-fit: contain;
+  margin-right: auto;
 }
+
+nav > a {
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+h1, h2 {
+  color: indigo;
+  text-align: center;
+}
+
+th {
+  color: slateblue;
+  padding: 10px 20px;
+}
+

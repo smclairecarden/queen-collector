@@ -1,0 +1,30 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/queens/index.css" /> 
+<%- include('../partials/nav') %> 
+
+
+<main>
+  <table>
+    <thead>
+      <tr>
+        <th>Drag Name</th>
+        <th>City</th>
+        <th>Season</th>
+        <th>Episode Eliminated</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% queens.forEach(queen => { %> 
+        <tr>
+          <td><%= queen.dragName %></td>
+          <td><%= queen.city %></td>
+          <td><%= queen.season %></td>
+          <td <%= queen.episodeEliminated %> ></td>
+          <td><a href="/queens/<%= queen._id %>" id="details">DETAILS</a></td>
+        </tr>
+      <% }) %> 
+    </tbody>
+  </table>
+</main>
+
+<%- include('../partials/footer') %> 

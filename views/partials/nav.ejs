@@ -8,11 +8,23 @@
       <a href="/auth/logout">
         <button type="submit">Logout</button>
       </a>
+    </a>
+    <i class="fa-solid fa-plane"></i> 
+    <a href="/profile"
+    <%- title === 'Add Queen' ? 'class="active"' : '' %>
+    >
+    MY PROFILE
+    </a>
+    <a 
+      href="/queens/new" <%- title === 'Add Queen' ? 'class="active"' : '' %>
+    >ADD QUEEN</a>
+    <a 
+      href="/queens" <%- title === 'All Queens' ? 'class="active"' : '' %>
+    >ALL QUEENS</a>
     <% } else { %>
       <a href="/auth/google" class="siwg-link">
         <button type="submit" class="siwg">
           <img id="siwg-image" alt="Sign in with Google" />
         </button>
-      </a>
     <% } %>
   </nav>
