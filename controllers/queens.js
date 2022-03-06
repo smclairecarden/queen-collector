@@ -95,6 +95,21 @@ function deleteQueen(req, res) {
  })
 }
 
+function addQueen(req, res) {
+  Queen.findById(req.params.id)
+  .then(queen => {
+    queen.user?.profile._id.push(req.body)
+    queen.save()
+    .then(() => {
+      res.redirect(`/queens/${queen._id}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/queens/${queen._id}`)
+  })
+}
+
 export {
   index,
   newQueen as new,
@@ -104,4 +119,5 @@ export {
   update,
   createRead,
   deleteQueen,
+  addQueen,
 }

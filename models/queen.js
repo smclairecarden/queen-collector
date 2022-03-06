@@ -12,11 +12,12 @@ const queenSchema = new Schema({
   dragName: {
     type: String,
     required: true,
+    unique: true,
   },
   city: String,
   season: Number,
   episodeEliminated: Number,
-  owner: {type: Schema.Types.ObjectId, 'ref': "Profile"},
+  owner: { type: Schema.Types.ObjectId, ref: "Profile" },
   reads: [readSchema],
 }, {
   timestamps: true
