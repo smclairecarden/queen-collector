@@ -9,12 +9,17 @@ const readSchema = new Schema({
 })
 
 const queenSchema = new Schema({
-  dragName: String,
+  dragName: {
+    type: String,
+    required: true,
+  },
   city: String,
   season: Number,
   episodeEliminated: Number,
   owner: {type: Schema.Types.ObjectId, 'ref': "Profile"},
-  reads: [readSchema]
+  reads: [readSchema],
+}, {
+  timestamps: true
 })
 
 const Queen = mongoose.model('Queen', queenSchema)
