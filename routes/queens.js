@@ -14,6 +14,8 @@ router.post('/:id/reads', isLoggedIn, queensCtrl.createRead)
 
 router.put('/:id', isLoggedIn, queensCtrl.update)
 
+router.delete('/:id', isLoggedIn, queensCtrl.deleteQueen)
+
 export {
   router
 }

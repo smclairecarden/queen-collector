@@ -3,7 +3,7 @@
 <%- include('../partials/nav') %> 
 
 
-<main>
+
   <table>
     <thead>
       <tr>
@@ -21,10 +21,19 @@
           <td><%= queen.season %></td>
           <td <%= queen.episodeEliminated %> ></td>
           <td><a href="/queens/<%= queen._id %>" id="details">DETAILS</a></td>
+          <td>
+            <% if (user.profile._id.equals(queen.owner)) { %>
+              <form 
+                action="/queens/<%= queen._id %>?_method=DELETE" 
+                method="POST">
+                <button>Delete Queen</button>
+              </form>
+            <% } %>
+          </td>
         </tr>
       <% }) %> 
     </tbody>
   </table>
-</main>
+
 
 <%- include('../partials/footer') %> 

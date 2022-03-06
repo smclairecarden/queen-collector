@@ -1,3 +1,4 @@
+import { Profile } from '../models/profile.js'
 import { Queen } from '../models/queen.js'
 
 function index(req, res) {
@@ -88,6 +89,12 @@ function createRead(req, res) {
   })
 }
 
+function deleteQueen(req, res) {
+ Queen.findByIdAndDelete(req.params.id, function(err, queen) {
+   res.redirect("/queens")
+ })
+}
+
 export {
   index,
   newQueen as new,
@@ -96,4 +103,5 @@ export {
   edit,
   update,
   createRead,
+  deleteQueen,
 }
