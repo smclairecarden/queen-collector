@@ -19,16 +19,20 @@
           <td><%= queen.dragName %></td>
           <td><%= queen.city %></td>
           <td><%= queen.season %></td>
-          <td <%= queen.episodeEliminated %> ></td>
-          <td><a href="/queens/<%= queen._id %>" id="details">DETAILS</a></td>
+          <td><%= queen.episodeEliminated %></td>
+          <% if(!user) { %> 
+          <td><a href="/queens/<%= queen._id %>" id="details" hidden>DETAILS</a></td>
+          <% } else { %>
+            <td><a href="/queens/<%= queen._id %>" id="details">DETAILS</a></td>
+          <% } %>  
           <td>
-            <% if (user.profile._id.equals(queen.owner)) { %>
+            <% if (user && user.profile && user.profile._id.equals(queen.owner)) { %>
               <form 
                 action="/queens/<%= queen._id %>?_method=DELETE" 
                 method="POST">
                 <button>X</button>
               </form>
-            <% } %>
+            <% } %> 
           </td>
         </tr>
       <% }) %> 
