@@ -79,6 +79,15 @@ function update(req, res) {
   })
 }
 
+function createRead(req, res) {
+  Queen.findById(req.params.id, function(err, queen) {
+    queen.reads.push(req.body)
+    queen.save(function(err) {
+      res.redirect(`/queens/${queen._id}`)
+    })
+  })
+}
+
 export {
   index,
   newQueen as new,
@@ -86,4 +95,5 @@ export {
   show,
   edit,
   update,
+  createRead,
 }

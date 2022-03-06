@@ -10,6 +10,7 @@ router.get('/:id', queensCtrl.show)
 router.get('/:id/edit', isLoggedIn, queensCtrl.edit)
 
 router.post('/', isLoggedIn, queensCtrl.create)
+router.post('/:id/reads', isLoggedIn, queensCtrl.createRead)
 
 router.put('/:id', isLoggedIn, queensCtrl.update)
 

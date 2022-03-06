@@ -39,8 +39,8 @@
    <tbody>
      <% queen.reads.forEach(function(read) { %>
       <tr>
-        <td>read.content</td>
-        <td><% review.profile %> </td>
+        <td><%= read.content %> </td>
+        <td><%= user.profile.name %> </td>
       </tr> 
     <% }) %> 
    </tbody>
