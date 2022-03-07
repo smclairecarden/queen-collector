@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: aqua;
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
@@ -49,7 +49,6 @@ nav > a {
 }
 
 h1, h2 {
-  color: indigo;
   text-align: center;
 }
 
