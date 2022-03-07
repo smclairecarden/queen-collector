@@ -18,17 +18,21 @@
       >
     </div>
   <% } %>
-  <h1><%= isSelf ? "Your" : `${profile.name}'s` %> Favorites:</h1>
-  <% profile.favorites.forEach(favorite => {  %>
-    <div class=“col”>
-      <div class=“card mb-4 shadow-sm”>
-        <%= favorite.dragName %>
-      </div>
-      <div class=“card-body”>
-        <p>City: <%= favorite.city %></p>
-        <p>Season: <%= favorite.season %></p>
-      </div>
-  <% }) %> 
-</main>
+  <h1><%= user ? "Your" : `${profile.name}'s` %> Favorites:</h1>
+  <% if(user.profile._id) { %> 
+    <% profile.favorites.forEach(favorite => {  %>
+      <div class=“col”>
+        <div class=“card mb-4 shadow-sm”>
+          <%= favorite.dragName %>
+        </div>
+        <div class=“card-body”>
+          <p>City: <%= favorite.city %></p>
+          <p>Season: <%= favorite.season %></p>
+        </div>
+    <% }) %>
+    <% } else { %>
+    <h1><%= user ? 'You dont' : `${profile.name} doesnt` %> have any favorites yet!</h1>
+    <% } %>
 
+</main>
 <%- include('../partials/footer') %> 
