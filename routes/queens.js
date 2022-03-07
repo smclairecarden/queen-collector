@@ -11,7 +11,7 @@ router.get('/:id/edit', isLoggedIn, queensCtrl.edit)
 
 router.post('/', isLoggedIn, queensCtrl.create)
 router.post('/:id/reads', isLoggedIn, queensCtrl.createRead)
-router.post("/queens/:queenId/profiles/:profileId", isLoggedIn, queensCtrl.addQueen)
+router.post("/:queenId/profiles/:profileId", isLoggedIn, queensCtrl.addQueen)
 
 router.put('/:id', isLoggedIn, queensCtrl.update)
 

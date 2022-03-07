@@ -33,8 +33,26 @@ function show(req, res) {
   })
 }
 
+// function addQueen(req, res) {
+//   Profile.findById(req.user.profile._id)
+//   .then(profile => {
+//     profile.queens.push(req.body.queen_id)
+//     profile.save()
+//     res.render('profile/show', {
+//       title: `${profile.name}'s Profile`,
+//       profile,
+//       isSelf,
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/')
+//   })
+// }
+
 
 export {
   index,
   show,
+  // addQueen,
 }

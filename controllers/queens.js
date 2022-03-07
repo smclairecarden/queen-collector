@@ -96,17 +96,20 @@ function deleteQueen(req, res) {
 }
 
 function addQueen(req, res) {
+  req.body.owner = req.user.profile._id
+  console.log('test')
   Queen.findById(req.params.id)
+  // Profile.findById(req.params.id)
   .then(queen => {
-    queen.user?.profile._id.push(req.body)
-    queen.save()
-    .then(() => {
-      res.redirect(`/queens/${queen._id}`)
+   queen.body.profile._id.push(req.body)
+   queen.save()
+   .then(() => {
+     res.redirect(`/queens/${queen._id}`)
     })
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect(`/queens/${queen._id}`)
+   })
+   .catch(err => {
+   console.log(err)
+   res.redirect(`/queens`)
   })
 }
 
