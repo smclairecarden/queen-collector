@@ -9,6 +9,7 @@
 <%- include('../partials/nav') %> 
 
 <main>
+
   <% if (profile.avatar) { %>
     <div>
       <img 
@@ -18,21 +19,17 @@
       >
     </div>
   <% } %>
-  <h1><%= user ? "Your" : `${profile.name}'s` %> Favorites:</h1>
-  <% if(user.profile._id) { %> 
+  <h1><%= isSelf ? `Your` : `${profile.name}'s` %> Favorites:</h1>
     <% profile.favorites.forEach(favorite => {  %>
       <div class=“col”>
-        <div class=“card mb-4 shadow-sm”>
+        <div class=“card”>
           <%= favorite.dragName %>
         </div>
         <div class=“card-body”>
           <p>City: <%= favorite.city %></p>
           <p>Season: <%= favorite.season %></p>
-        </div>
     <% }) %>
-    <% } else { %>
-    <h1><%= user ? 'You dont' : `${profile.name} doesnt` %> have any favorites yet!</h1>
-    <% } %>
+
 
 </main>
 <%- include('../partials/footer') %> 

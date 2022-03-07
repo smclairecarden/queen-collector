@@ -16,7 +16,7 @@ function index(req, res) {
 }
 
 function show(req, res) {
-    Profile.findById(req.user.profile._id)
+    Profile.findById(req.params.id)
     .populate('favorites')
     .then(self => {
       const isSelf = self._id.equals(req.params.profileId)

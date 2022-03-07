@@ -94,15 +94,13 @@ function deleteQueen(req, res) {
    res.redirect("/queens")
  })
 }
-//find the queen
-//push the entire Queen into the favorites array
-// show queen info on profile
+
 function addFavorite(req, res) {
   console.log('test')
   Profile.findById(req.params.profileId)
-
   // Profile.findById(req.params.id)
   .then(profile => {
+  Queen.findById(req.params.id)
    profile.favorites.push(req.params.queenId)
    profile.save()
    .then(() => {
