@@ -94,17 +94,19 @@ function deleteQueen(req, res) {
    res.redirect("/queens")
  })
 }
-
-function addQueen(req, res) {
-  req.body.owner = req.user.profile._id
+//find the queen
+//push the entire Queen into the favorites array
+// show queen info on profile
+function addFavorite(req, res) {
   console.log('test')
-  Queen.findById(req.params.id)
+  Profile.findById(req.params.profileId)
+
   // Profile.findById(req.params.id)
-  .then(queen => {
-   queen.body.profile._id.push(req.body)
-   queen.save()
+  .then(profile => {
+   profile.favorites.push(req.params.queenId)
+   profile.save()
    .then(() => {
-     res.redirect(`/queens/${queen._id}`)
+     res.redirect(`/queens/${req.params.queenId}`)
     })
    })
    .catch(err => {
@@ -122,5 +124,5 @@ export {
   update,
   createRead,
   deleteQueen,
-  addQueen,
+  addFavorite,
 }

@@ -18,26 +18,17 @@
       >
     </div>
   <% } %>
-  <h1><%= isSelf ? "Your" : `${profile.name}'s` %> Favorites!</h1>
-  <% if(profile.queens) { %> 
-  <% queens.forEach(queen => {  %>
-    <div class="col">
-      <a class="text-decoration-none" href="/queens/<%= queen._id %>/profiles/<%= user?.profile._id %> ">
-        <div class="card mb-4 shadow-sm">
-          <%= queen.dragName %>
-        </div>
-        <div class="card-body">
-          <p><%= queen.city %></p>
-          <p><%= queen.season %></p>
-          <p><%= queen.episodeEliminated %></p>
-        </div>
-      </a>
+  <h1><%= isSelf ? "Your" : `${profile.name}'s` %> Favorites:</h1>
+  <% profile.favorites.forEach(favorite => {  %>
+    <div class=“col”>
+      <div class=“card mb-4 shadow-sm”>
+        <%= favorite.dragName %>
+      </div>
+      <div class=“card-body”>
+        <p>City: <%= favorite.city %></p>
+        <p>Season: <%= favorite.season %></p>
+      </div>
   <% }) %> 
-  <% } else { %>
-    <h2>
-      <%= isSelf ? "You don't" : `${profile.name} doesn't` %> have any Queens favorited yet!
-    </h2> 
-  <% } %> 
 </main>
 
 <%- include('../partials/footer') %> 

@@ -1,10 +1,15 @@
 import mongoose from 'mongoose'
 
+// const favoriteSchema = new mongoose.Schema({
+
+// })
+
+
 
 const profileSchema = new mongoose.Schema({
   name: String,
   avatar: String,
-  queen: { type: mongoose.Schema.Types.ObjectId, ref: 'Queen' },
+  favorites: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Queen' }],
 }, {
   timestamps: true
 })
