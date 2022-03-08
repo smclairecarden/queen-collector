@@ -2,7 +2,7 @@ import { Profile } from '../models/profile.js'
 import { Queen } from '../models/queen.js'
 
 function index(req, res) {
-  Queen.find({})
+  Queen.find({}).sort({season: 'ascending'})
   .then(queens =>  {
     res.render('queens/index', {
       queens,
@@ -26,7 +26,7 @@ function create(req, res) {
   Queen.create(req.body)
   .then(queen => {
     res.redirect('/queens')
-  })
+  }) 
   .catch(err => {
     console.log(err)
     res.redirect('/queens')
