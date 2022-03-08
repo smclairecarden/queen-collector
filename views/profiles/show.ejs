@@ -26,7 +26,16 @@
       <h5 class="card-title"><%= favorite.dragName %> </h5>
       <p>City: <%= favorite.city %></p>
       <p>Season: <%= favorite.season %></p>
-      <a href="#" class="card-link">X</a>
+      <% if(profile._id.equals(user.profile.id)) { %>
+        <form 
+        action="/profiles/favorites/<%= favorite._id %>?_method=DELETE" 
+        method="POST"
+        style="display: inline-block;"
+      >
+        <button type="submit">X</button>
+      </form>
+      <% } %> 
+      
     </div>
   </div>
   <% }) %>

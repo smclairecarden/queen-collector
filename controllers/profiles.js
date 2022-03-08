@@ -16,21 +16,22 @@ function index(req, res) {
 }
 
 function show(req, res) {
-    Profile.findById(req.params.id)
-    .populate('favorites')
-    .then(self => {
-      const isSelf = self._id.equals(req.params.profileId)
-      res.render('profiles/show', {
-        title: `${self}'s Profile`,
-        profile: self,
-        // queens,
-        isSelf,
-      })
+  Profile.findById(req.params.id)
+  .populate('favorites')
+  .then(self => {
+    const isSelf = self._id.equals(req.params.profileId)
+    console.log(req.params.profileId)
+    res.render('profiles/show', {
+      title: `${self}'s Profile`,
+      profile: self,
+      // queens,
+      isSelf,
     })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/')
   })
+.catch(err => {
+  console.log(err)
+  res.redirect('/')
+})
 }
 
 function showQueen(req, res) {
@@ -44,10 +45,24 @@ function showQueen(req, res) {
     })
   }
 
-
+function deleteFavorite(req, res) {
+  Profile.findById(req.user.profile._id)
+  .then(profile => {
+    profile.favorites.remove({_id:  req.params.id})
+    profile.save()
+    .then(() => {
+      res.redirect(`/profiles/${req.user.profile._id}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/profiles/${req.user.profile._id}`)
+  })
+}
 
 export {
   index,
   show,
   showQueen,
+  deleteFavorite,
 }
