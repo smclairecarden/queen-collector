@@ -102,11 +102,9 @@ function addFavorite(req, res) {
   .then(profile => {
   Queen.findById(req.params.id)
    profile.favorites.push(req.params.queenId)
-   if(req.params.id === profile.favorites) {
-     profile.favorites.shift(req.params.queenId)
-     .then(() => {
-       alert('You have already favorited this queen!')
-      })
+   if(req.params.id.equals(profile.favorites)) {
+    alert('You have already favorited this queen!')
+    profile.favorites.shift(req.params.queenId)
    }
    profile.save()
    .then(() => {
