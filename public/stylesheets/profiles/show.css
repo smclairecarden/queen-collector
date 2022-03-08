@@ -3,7 +3,8 @@ main {
 }
 
 h1 {
-  font-size: large;
+  font-size: 3rem;
+  margin-top: 0;
 }
 
 .profile-avatar {
@@ -13,13 +14,16 @@ h1 {
 }
 
 h1 {
-  margin-top: 0;
+  color: slateblue;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 .card {
   margin: 10px auto;
   display: grid;
-  color: turquoise;
+  color: hotpink;
+  border-radius: 10%;
+  background-color: aqua;
 }
 
 .card-title {
@@ -29,4 +33,5 @@ h1 {
 
 p {
   font-size: medium;
+  font-family: 'Fjalla One', sans-serif;
 }
