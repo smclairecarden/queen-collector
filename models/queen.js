@@ -15,8 +15,8 @@ const queenSchema = new Schema({
     unique: true,
   },
   city: String,
-  season: Number,
-  episodeEliminated: Number,
+  season: String,
+  episodeEliminated: String,
   owner: { type: Schema.Types.ObjectId, ref: "Profile" },
   reads: [readSchema],
 }, {

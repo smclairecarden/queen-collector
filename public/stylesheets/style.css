@@ -68,3 +68,9 @@ button {
   text-decoration: none;
   color: hotpink;
 }
+
+.welcome-img {
+  justify-content: center;
+  align-items: center;
+  margin: 0 65px;
+}
