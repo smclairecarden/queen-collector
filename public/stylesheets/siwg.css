@@ -4,10 +4,12 @@
   border: none;
   width: 191px;
   height: 46px;
+  text-decoration: none;
 }
 
 .siwg-link {
   display: inline-block;
+  text-decoration: none;
 }
 
 .siwg:focus,

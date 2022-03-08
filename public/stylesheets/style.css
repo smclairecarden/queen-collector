@@ -63,8 +63,8 @@ button {
 
 .welcome-message {
   background-color: white;
-  text-align: center;
-  margin: 30px;
+  margin: 100px 300px;
   padding: 50px;
   text-decoration: none;
+  color: hotpink;
 }
