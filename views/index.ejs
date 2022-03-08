@@ -3,7 +3,7 @@
 
 <main>
   <div class="welcome-message">
-  <h1>Hello, <%= user ? user.profile.name : "Drag Race Fan!" %></h1>
+  <h1 class="text">Hello, <%= user ? user.profile.name : "Drag Race Fan!" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>
       <img class="welcome-img"

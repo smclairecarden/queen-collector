@@ -18,6 +18,7 @@ function index(req, res) {
 function show(req, res) {
   Profile.findById(req.params.id)
   .populate('favorites')
+  
   .then(self => {
     const isSelf = self._id.equals(req.params.profileId)
     console.log(req.params.profileId)
@@ -60,9 +61,16 @@ function deleteFavorite(req, res) {
   })
 }
 
+function doubleFavorite(req, res) {
+  if(profile.favorites === req.user.profile._id) {
+    alert('This queen is already in your favorites!')
+  }
+}
+
 export {
   index,
   show,
   showQueen,
   deleteFavorite,
+  doubleFavorite,
 }
