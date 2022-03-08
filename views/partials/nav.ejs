@@ -6,10 +6,6 @@
 <body>
   <nav>
     <% if (user) { %>
-      <a href="/auth/logout">
-        <button type="submit">Logout</button>
-      </a>
-    </a>
     <i class="fa-solid fa-plane"></i> 
     <a href="/profiles/:id"
     <%- title === 'Add Queen' ? 'class="active"' : '' %>
@@ -27,6 +23,9 @@
     <a 
     href="/queens" <%- title === 'All Queens' ? 'class="active"' : '' %>
     >ALL QUEENS</a>
+    <a href="/auth/logout">
+      <button type="submit">Logout</button>
+    </a>
     <% } else { %>
     <a 
       href="/queens" <%- title === 'All Queens' ? 'class="active"' : '' %>

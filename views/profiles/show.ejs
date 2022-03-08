@@ -20,16 +20,16 @@
     </div>
   <% } %>
   <h1><%= isSelf ? `Your` : `${profile.name}'s` %> Favorites:</h1>
-    <% profile.favorites.forEach(favorite => {  %>
-      <div class=“col”>
-        <div class=“card”>
-          <%= favorite.dragName %>
-        </div>
-        <div class=“card-body”>
-          <p>City: <%= favorite.city %></p>
-          <p>Season: <%= favorite.season %></p>
-    <% }) %>
-
+  <% profile.favorites.forEach(favorite => {  %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= favorite.dragName %> </h5>
+      <p>City: <%= favorite.city %></p>
+      <p>Season: <%= favorite.season %></p>
+      <a href="#" class="card-link">X</a>
+    </div>
+  </div>
+  <% }) %>
 
 </main>
 <%- include('../partials/footer') %> 
