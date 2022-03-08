@@ -7,7 +7,7 @@ h1 {
 }
 
 .profile-avatar {
-  margin: 50px 100px;
+  margin: 50px 50px;
   justify-content: center;
   align-items: center;
 }
@@ -18,7 +18,7 @@ h1 {
 
 .card {
   margin: 10px auto;
-  display: flex;
+  display: grid;
   color: turquoise;
 }
 
