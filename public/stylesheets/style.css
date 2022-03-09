@@ -55,6 +55,7 @@ button {
   max-width: 300px;
   padding: 10%;
   font-size: 1.5rem;
+  border-radius: 20px;
 }
 
 .text {
