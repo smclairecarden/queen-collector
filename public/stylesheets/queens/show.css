@@ -18,9 +18,19 @@ section {
 }
 
 table {
-  margin: 0 auto;
+  margin: 2% auto;
   text-align: center;
+  color: hotpink;
 }
+
+th, td {
+  font-size: 1.5em;
+}
+
+th {
+  color: slateblue;
+}
+
 
 form {
   font-size: 1rem;

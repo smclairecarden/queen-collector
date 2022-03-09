@@ -2,7 +2,6 @@ html {
   box-sizing: border-box;
 }
 
-
 /* resets font size to be 62.5% of the user preference - in most browser configurations this will be 10px */
 :root {
   font-size: 62.5%;
@@ -24,7 +23,6 @@ main {
 }
 
 body > nav {
-  grid-area: nav;
   background-color: hotpink;
   display: flex;
   justify-content: flex-end;
@@ -51,6 +49,7 @@ nav > a {
 
 button {
   background-color: limegreen;
+  padding: 5px;
 }
 
 .welcome-message {
