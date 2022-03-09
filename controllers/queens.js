@@ -100,22 +100,36 @@ function addFavorite(req, res) {
   Profile.findById(req.params.profileId)
   // Profile.findById(req.params.id)
   .then(profile => {
-  Queen.findById(req.params.id)
-   profile.favorites.push(req.params.queenId)
-   if(req.params.id.equals(profile.favorites)) {
-    alert('You have already favorited this queen!')
-    profile.favorites.shift(req.params.queenId)
-   }
-   profile.save()
-   .then(() => {
-     res.redirect(`/queens/${req.params.queenId}`)
-    })
-   })
-   .catch(err => {
+  Queen.findById(req.params.queenId)
+  .then(queen => {
+    // const result = profile.favorites.filter(x => {
+    //   console.log('HERE IS WHAT X IS', x)
+    //   console.log('LOOOOOOOOOOK', queen._id)
+    //    x.equals(queen._id)
+    // })
+    // console.log('FAVORITES ARRRAY', profile.favorites)
+    // console.log('RESULTS HERE', result)
+    if(profile.favorites.includes(req.params.queenId)) {
+    console.log('You have already favorited this queen!')
+    // profile.favorites.pop(req.params.queenId)
+    res.redirect(`/queens/${req.params.queenId}`)
+    } else {
+    profile.favorites.push(req.params.queenId)
+    profile.save()
+    res.redirect(`/queens/${req.params.queenId}`)
+    }
+  }).catch(err => {
    console.log(err)
    res.redirect(`/queens`)
   })
+  
+})
 }
+
+// function noDoubles(req, res) {
+//   Queen.findById(req.params.id)
+
+// }
 
 export {
   index,
@@ -127,4 +141,5 @@ export {
   createRead,
   deleteQueen,
   addFavorite,
+  // noDoubles
 }
