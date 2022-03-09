@@ -2,11 +2,48 @@ body {
   text-align: center;
 }
 
+h1 {
+  font-size: 4rem;
+  color: slateblue;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+section {
+  margin: 0;
+  border: 4px solid hotpink;
+  margin: 5% 20%;
+}
+
 table {
   margin: 0 auto;
   text-align: center;
 }
 
+form {
+  font-size: 1rem;
+}
+
 div {
   display: inline-block;
+  color: slateblue;
+  font-size: 2rem;
+  padding: 5px;
+}
+
+button {
+  padding: 5px;
+  margin: 5px;
+}
+
+label {
+  font-size: 1.5rem;
+  color: slateblue;
+  margin: 5px;
+}
+
+textarea {
+  margin: 5px;
 }
