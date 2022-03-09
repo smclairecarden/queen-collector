@@ -1,3 +1,33 @@
 body {
   text-align: center;
 }
+
+main {
+  border: 3px solid hotpink;
+  margin: 5% 10%;
+}
+
+h1 {
+  color: slateblue;
+  margin: 2%;
+  font-size: 4rem;
+}
+
+input {
+  margin: .5%;
+  width: 10rem;
+}
+
+select {
+  margin: .5%;
+  width: 10rem;
+}
+
+label {
+  font-size: 1.5rem;
+  color: slateblue;
+}
+
+button {
+  margin: 10px;
+}

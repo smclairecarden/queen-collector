@@ -1,1 +1,65 @@
+body {
+  text-align: center;
+}
 
+main {
+  border: 3px solid hotpink;
+  margin: 5% 10%;
+}
+
+h1 {
+  color: slateblue;
+  margin: 2%;
+  font-size: 2rem;
+}
+
+input {
+  margin: .5%;
+  width: 10rem;
+}
+
+select {
+  margin: .5%;
+  width: 10rem;
+}
+
+label {
+  font-size: 1.2rem;
+  color: slateblue;
+}
+
+body {
+  background-color: aqua;
+  /* Use a system font, if none are available use an available sans-sarif font */
+  font-family: 'Fjalla One', sans-serif;
+  margin: 0;
+}
+
+body > nav {
+  grid-area: nav;
+  background-color: hotpink;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 30px;
+  font-weight: bold;
+}
+
+nav > i {
+  width: 34px;
+  object-fit: contain;
+  margin-right: auto;
+}
+
+nav > a {
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+button {
+  background-color: limegreen;
+  margin: 10px;
+}

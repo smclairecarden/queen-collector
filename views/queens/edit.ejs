@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/queens/edit.css" /> 
 <%- include('../partials/nav') %> 
 
+
 <main>
   <h1><%= title %> </h1>
   <form action="/queens/<%= queen._id %>?_method=PUT" method="POST">
@@ -13,7 +14,7 @@
       <input type="text" name="city" value="<%= queen.city %> ">
     </label><br>
     <label>Season:
-      <select name="season" default="<%= queen.season %> ">
+      <select name="season" value="<%= queen.season %> ">
         <option value="season 1">1</option>
         <option value="season 2">2</option>
         <option value="season 3">3</option>
