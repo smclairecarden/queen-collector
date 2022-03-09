@@ -2,8 +2,12 @@ import { Profile } from '../models/profile.js'
 import { Queen } from '../models/queen.js'
 
 function index(req, res) {
-  Queen.find({}).sort({season: 'ascending'})
+  Queen.find({})
   .then(queens =>  {
+    queens = queens.sort((a, b) => {
+      return parseInt(a.season) - parseInt(b.season)
+    })
+    console.log(queens)
     res.render('queens/index', {
       queens,
       title: 'The Queens'
