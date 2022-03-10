@@ -29,7 +29,7 @@
     >
       <label for="content-textarea">Read <%= queen.dragName %> :</label><br>
       <textarea name="content" id="content-textarea"></textarea><br>
-        <button type="submit">Add Read</button>
+        <button class="add-read" type="submit">Add Read</button>
     </form>
   <% if(queen.reads.length) { %>
     <table>
@@ -48,7 +48,7 @@
       <% }) %> 
     </tbody>
     </table>
-<% } %> 
+  <% } %> 
 </section>
 <% } %> 
 
