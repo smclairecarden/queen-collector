@@ -43,6 +43,8 @@
 ## Next Steps:
 - A place for users to add in photos of the queens
 - A page where users can sort the queens by seasons.
+- A page for Queens who have not appeared on Drag Race.
+- Add to Favorites Button change to 'Added to Favorites' when the button has been clicked.
 - Light/Dark Mode
 
 ## Credits:
