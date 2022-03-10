@@ -3,19 +3,19 @@
 
 <main>
   <div class="welcome-message">
-  <h1 class="text">Hello, <%= user ? user.profile.name : "Drag Race Fan!" %></h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img class="welcome-img"
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
-      />
-    </div>
-  <% } else { %>
-    <div class="welcome-text">
-    <h2>Welcome to the Queen<br> Collector,  a place for Drag Race<br> fans to add and share their<br> favorite queens. Log in and have<br> fun! Racers, start your engines!</h2>
-    </div>
-  <% } %> 
+    <h1 class="text">Hello, <%= user ? user.profile.name : "Drag Race Fan!" %></h1>
+      <% if (user?.profile.avatar) { %>
+        <div>
+          <img class="welcome-img"
+            src="<%= user.profile.avatar %>"
+            alt="<%= user.profile.name %> avatar"
+          />
+        </div>
+      <% } else { %>
+        <div class="welcome-text">
+          <h2>Welcome to the Queen<br> Collector,  a place for Drag Race<br> fans to add and share their<br> favorite queens. Log in and have<br> fun! Racers, start your engines!</h2>
+        </div>
+      <% } %> 
   </div>
 </main>
 

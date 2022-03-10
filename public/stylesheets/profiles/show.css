@@ -1,3 +1,7 @@
+body {
+  font-family: 'Fjalla One', sans-serif;
+}
+
 main {
   text-align: center;
 }
@@ -10,6 +14,7 @@ h1 {
   font-size: 3rem;
   margin-top: 0;
   text-align: center;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 .profile-avatar {

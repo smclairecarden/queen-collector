@@ -1,11 +1,5 @@
 import mongoose from 'mongoose'
 
-// const favoriteSchema = new mongoose.Schema({
-
-// })
-
-
-
 const profileSchema = new mongoose.Schema({
   name: String,
   avatar: String,

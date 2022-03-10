@@ -19,31 +19,37 @@
     </div>
   <% } %>
   <% if(user.profile._id.equals(profile._id)) { %> 
-  <h1>Your Favorites:</h1>
+    <h1>Your Favorites:</h1>
   <% } else { %>
-  <h1><%= `${profile.name}'s` %> Favorites</h1>
+    <h1><%= `${profile.name}'s` %> Favorites</h1>
   <% } %> 
   <div 
   class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g1 px-4"
   >
+  <% if(profile.favorites.length) { %> 
   <% profile.favorites.forEach(favorite => {  %>
-  <div style="width: 18rem"  class="card">
-    <div class="card-body">
-      <h5 class="card-title"><%= favorite.dragName %> </h5>
-      <p>City: <%= favorite.city %></p>
-      <p>Season: <%= favorite.season %></p>
-      <% if(profile._id.equals(user.profile.id)) { %>
-        <form 
-        action="/profiles/favorites/<%= favorite._id %>?_method=DELETE" 
-        method="POST"
-        style="display: inline-block;"
-      >
-        <button type="submit">X</button>
-      </form>
-      <% } %> 
-    </div>
-  </div>
+    <div style="width: 18rem"  class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= favorite.dragName %> </h5>
+        <p>City: <%= favorite.city %></p>
+        <p>Season: <%= favorite.season %></p>
+          <% if(profile._id.equals(user.profile.id)) { %>
+            <form 
+            action="/profiles/favorites/<%= favorite._id %>?_method=DELETE" 
+            method="POST"
+            style="display: inline-block;"
+            >
+            <button type="submit">X</button>
+            </form>
+          <% } %> 
+      </div>
+     </div>
   <% }) %>
+  <% } else if(user.profile._id.equals(profile._id)) { %>
+    <h2>You don't have any favorites yet!</h2>
+  <% } else { %> 
+    <h2><%= `${profile.name}` %> doesn't have any favorites yet!</h2>
+  <% } %> 
 </div>
 
 <%- include('../partials/footer') %> 

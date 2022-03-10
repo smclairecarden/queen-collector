@@ -4,52 +4,52 @@
 
 
   <h1><%= title %></h1>
-  <section>
-    <div>Drag Name: </div>
-    <div><%= queen.dragName %></div><br>
-    <div>City: </div>
-    <div><%= queen.city %></div><br>
-    <div>Season: </div>
-    <div><%= queen.season %></div><br>
-    <div>Episode Eliminated: </div>
-    <div><%= queen.episodeEliminated %></div>
-    <% if (queen.owner.equals(user?.profile._id)) { %>
-      <form action="/queens/<%= queen._id %>/edit" method="GET">
-        <button class="btn" type="submit">Edit this Queen</button>
-      </form>
-    <% } %>
-    <form action="/queens/<%= queen._id %>/profiles/<%= user?.profile._id %>" method="POST">
-    <button class="btn" type="submit">Add to Favorites</button>
+    <section>
+      <div>Drag Name: </div>
+      <div><%= queen.dragName %></div><br>
+      <div>City: </div>
+      <div><%= queen.city %></div><br>
+      <div>Season: </div>
+      <div><%= queen.season %></div><br>
+      <div>Episode Eliminated: </div>
+      <div><%= queen.episodeEliminated %></div>
+      <% if (queen.owner.equals(user?.profile._id)) { %>
+        <form action="/queens/<%= queen._id %>/edit" method="GET">
+          <button class="btn" type="submit">Edit this Queen</button>
+        </form>
+      <% } %>
+        <form action="/queens/<%= queen._id %>/profiles/<%= user?.profile._id %>" method="POST">
+          <button class="btn" type="submit">Add to Favorites</button>
+        </form>
+  <h2>The Library Is Open!</h2>
+    <form 
+      id="add-read-form"
+      action="/queens/<%= queen._id %>/reads"
+      method="POST"
+    >
+      <label for="content-textarea">Read <%= queen.dragName %> :</label><br>
+      <textarea name="content" id="content-textarea"></textarea><br>
+        <button type="submit">Add Read</button>
     </form>
-    <h2>The Library Is Open!</h2>
-<form 
-  id="add-read-form"
-  action="/queens/<%= queen._id %>/reads"
-  method="POST"
->
-  <label for="content-textarea">Read <%= queen.dragName %> :</label><br>
-  <textarea name="content" id="content-textarea"></textarea><br>
-  <button type="submit">Add Read</button>
-</form>
-<% if(queen.reads.length) { %>
-  <table>
-   <thead>
-     <tr>
-       <th>Read</th>
-       <th>Posted By</th>
-     </tr>
-   </thead>
-   <tbody>
-     <% queen.reads.forEach(function(read) { %>
-      <tr>
-        <td><%= read.content %> </td>
-        <td>~<%= user.profile.name %> </td>
-      </tr> 
-    <% }) %> 
-   </tbody>
-  </table>
-<% } %> 
-  </section>
+  <% if(queen.reads.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Read</th>
+          <th>Posted By</th>
+        </tr>
+    </thead>
+    <tbody>
+      <% queen.reads.forEach(function(read) { %>
+        <tr>
+          <td><%= read.content %> </td>
+          <td>~<%= user.profile.name %> </td>
+        </tr> 
+      <% }) %> 
+    </tbody>
+    </table>
+  <% } %> 
+</section>
 
 
 <%- include('../partials/footer') %> 
