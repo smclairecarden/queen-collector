@@ -7,8 +7,9 @@
   crossorigin="anonymous"
 >
 <link rel="stylesheet" href="/stylesheets/profiles/show.css" /> 
-<%- include('../partials/nav') %> 
+<%- include('../partials/nav') %>
 
+<% if(user.profile._id) { %> 
   <% if (profile.avatar) { %>
     <div>
       <img 
@@ -51,5 +52,6 @@
     <h2><%= `${profile.name}` %> doesn't have any favorites yet!</h2>
   <% } %> 
 </div>
+<% } %> 
 
 <%- include('../partials/footer') %> 

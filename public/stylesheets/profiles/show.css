@@ -19,14 +19,14 @@ h1 {
   color: slateblue;
 }
 
-  h2 {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: hotpink;
-    font-size: 2rem;
-    margin: 0 auto;
-  }
+h2 {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: hotpink;
+  font-size: 2rem;
+  margin: 0 auto;
+}
 
 .profile-avatar {
   display: block;

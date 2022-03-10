@@ -28,3 +28,13 @@ a {
   text-decoration: none;
   color: hotpink;
 }
+
+button {
+  font-weight: bold;
+  font-family: 'Fjalla One', sans-serif;
+  padding: 5px;
+}
+
+nav > a:hover {
+  color: slateblue;
+  }

@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/queens/new.css" /> 
 <%- include('../partials/nav') %> 
 
+<% if(user.profile._id) { %>
 <main>
   <h1><%= title %> </h1>
   <form action="/queens" method="POST">
@@ -51,5 +52,6 @@
       <button type="submit">Add Queen</button>
   </form>
 </main>
+<% } %>
 
 <%- include('../partials/footer') %> 

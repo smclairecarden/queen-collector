@@ -37,6 +37,11 @@ body {
 }
 
 button {
-  background-color: limegreen;
-  margin: 10px;
+  font-weight: bold;
+  font-family: 'Fjalla One', sans-serif;
+  padding: 5px;
+}
+
+nav > a:hover {
+color: slateblue;
 }

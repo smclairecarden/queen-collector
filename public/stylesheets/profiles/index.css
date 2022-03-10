@@ -13,3 +13,7 @@ body {
   font-size: 2rem;
 }
 
+.card-img-top {
+  border-radius: 50%;
+  background-color: lightpink;
+}

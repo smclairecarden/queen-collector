@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/queens/show.css" /> 
 <%- include('../partials/nav') %> 
 
-
+<% if(user.profile._id) { %>
   <h1><%= title %></h1>
     <section>
       <div>Drag Name: </div>
@@ -50,6 +50,6 @@
     </table>
 <% } %> 
 </section>
-
+<% } %> 
 
 <%- include('../partials/footer') %> 

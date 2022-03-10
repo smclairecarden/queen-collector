@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/queens/edit.css" /> 
 <%- include('../partials/nav') %> 
 
-
+<% if(user.profile._id) { %>
 <main>
   <h1><%= title %> </h1>
   <form action="/queens/<%= queen._id %>?_method=PUT"         method="POST">
@@ -54,5 +54,6 @@
     <button type="submit">Edit Queen</button>
   </form>
 </main>
+<% } %> 
 
 <%- include('../partials/footer') %> 

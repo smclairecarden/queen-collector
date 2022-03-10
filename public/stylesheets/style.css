@@ -29,27 +29,27 @@ body > nav {
   align-items: center;
   padding: 0 20px 0 30px;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 15px;
 }
 
-nav > i {
-  width: 34px;
-  object-fit: contain;
-  margin-right: auto;
-}
+
 
 nav > a {
-  margin: 20px;
+  margin: 15px;
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
   color: white;
 }
 
-
+nav > a:hover {
+  color: slateblue;
+  }
 
 button {
   background-color: limegreen;
+  font-weight: bold;
+  font-family: 'Fjalla One', sans-serif;
   padding: 5px;
 }
 

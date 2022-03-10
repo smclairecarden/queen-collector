@@ -44,8 +44,9 @@ div {
 }
 
 button {
+  font-weight: bold;
+  font-family: 'Fjalla One', sans-serif;
   padding: 5px;
-  margin: 5px;
 }
 
 label {
@@ -57,3 +58,7 @@ label {
 textarea {
   margin: 5px;
 }
+
+nav > a:hover {
+  color: slateblue;
+  }
