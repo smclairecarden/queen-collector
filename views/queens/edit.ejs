@@ -13,7 +13,8 @@
     <br><input type="text" name="city" value="<%= queen.city %> ">
   </label><br>
   <label>Season:
-    <br><select name="season" value="<%= queen.season %> ">
+    <br><select name="season">
+      <option value="<%= queen.season %> "><%= queen.season %></option>
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -31,7 +32,8 @@
     </select>
   </label><br>
   <label>Episode Eliminated:
-    <select name="episodeEliminated" value="<%= queen.episodeEliminated %> ">
+    <select name="episodeEliminated">
+      <option value="<%= queen.episodeEliminated %> "><%= queen.episodeEliminated %></option>
       <option value="N/A">N/A</option>
       <option value="episode 1">1</option>
       <option value="episode 2">2</option>

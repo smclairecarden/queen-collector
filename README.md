@@ -12,9 +12,9 @@
 - Click on 'Add A Queen" to add a queen to the list.
 - Click on 'All Queens' to view the full list of queens. 
 - Clicking on 'Details' will take you to the selected queens info page. Here you can add the queen to your favorites, and add 'reads'.
-- If you have added the queen you click on, Details is also where you can edit the info.
+- If you have added the queen you click on, Details is also where you can Edit the info.
 - The X Button will delete the queen you have added.
-- Profiles will take you to all the profiles. You can click on a profile to see queens they have favorited.
+- 'Profiles' will take you to all the profiles. You can click on a profile to see queens they have favorited.
 - Enjoy!
 
 ## What the Game Looks Like:

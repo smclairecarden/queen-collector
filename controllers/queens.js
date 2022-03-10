@@ -40,6 +40,7 @@ function create(req, res) {
 function show(req, res) {
   Queen.findById(req.params.id)
   .populate("owner")
+  .populate("reads.author")
   .then(queen => {
     res.render('queens/show', {
       title: 'All About This Queen',
@@ -86,6 +87,7 @@ function update(req, res) {
 
 function createRead(req, res) {
   Queen.findById(req.params.id, function(err, queen) {
+    req.body.author = req.user.profile._id
     queen.reads.push(req.body)
     queen.save(function(err) {
       res.redirect(`/queens/${queen._id}`)

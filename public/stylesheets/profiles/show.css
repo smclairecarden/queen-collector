@@ -11,11 +11,22 @@ div {
 }
 
 h1 {
-  font-size: 3rem;
-  margin-top: 0;
+  font-size: 4rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
   font-family: 'Fjalla One', sans-serif;
+  color: slateblue;
 }
+
+  h2 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: hotpink;
+    font-size: 2rem;
+    margin: 0 auto;
+  }
 
 .profile-avatar {
   display: block;
@@ -24,12 +35,6 @@ h1 {
   align-items: center;
   border-radius: 50%;
   width: 10%;
-}
-
-h1 {
-  margin: 2% 0 0 0;
-  color: slateblue;
-  font-family: 'Fjalla One', sans-serif;
 }
 
 .card {

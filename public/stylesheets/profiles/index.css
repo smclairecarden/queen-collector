@@ -3,4 +3,13 @@ body {
   font-family: 'Fjalla One', sans-serif;
 }
 
+.card-body {
+  text-align: center;
+  background-color: lightpink;
+}
+
+.card-title {
+  color: slateblue;
+  font-size: 2rem;
+}
 
