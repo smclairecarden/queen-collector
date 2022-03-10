@@ -22,7 +22,7 @@ function show(req, res) {
     const isSelf = self._id.equals(req.params.profileId)
     console.log(req.params.profileId)
     res.render('profiles/show', {
-      title: `${self}'s Profile`,
+      title: `${self.name}'s Profile`,
       profile: self,
       isSelf,
     })
