@@ -102,7 +102,6 @@ function deleteQueen(req, res) {
 }
 
 function addFavorite(req, res) {
-  console.log('test')
   Profile.findById(req.params.profileId)
     .then(profile => {
       Queen.findById(req.params.queenId)

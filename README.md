@@ -19,7 +19,7 @@
 - 'Profiles' will take you to all the profiles. You can click on a profile to see queens that user has favorited.
 - Enjoy!
 
-## What the Game Looks Like:
+## What the App Looks Like:
 ![HomePage](/public/assets/home-page.png)
 ![UserQueenIndex](/public/assets/user-queen-index.png)
 ![SignInPage](/public/assets/sign-in-page.png)
