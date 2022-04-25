@@ -21,13 +21,8 @@
 
 ## What the App Looks Like:
 ![HomePage](/public/assets/home-page.png)
-![UserQueenIndex](/public/assets/user-queen-index.png)
-![SignInPage](/public/assets/sign-in-page.png)
-![ProfilesPage](public/assets/users-page.png)
-![IndividualProfile](/public/assets/profile-page.png)
 ![QueenIndex](public/assets/profile-queen-index.png)
-![AboutQueen](public/assets/about-queen.png)
-![EditQueen](public/assets/about-queen-edit.png)
+
 
 ## Technologies used:
 - HTML
