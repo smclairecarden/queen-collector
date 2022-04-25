@@ -2,7 +2,7 @@
 
 ## About:
   - The Queen Collector is an app for fans of Rupaul's Drag Race to come together to add and favorite their favorite queens. 
-  - Users can add a queen, edit the info on queens they have added, add "Reads", or comments for each queen, and view queens all users have 'favorited' on individual profile pages.
+  - Users can add a queen, edit the info on queens they have added, add "reads", or comments for each queen, and view queens all users have favorited on individual profile pages.
 
 
 ## Getting Started:
@@ -16,7 +16,7 @@
 - Clicking on 'Details' will take you to the selected queens info page. Here you can add the queen to your favorites, as well as add 'reads'.
 - If you have added the queen you click on, Details is also where you can Edit the info.
 - The X Button will delete the queen you have added.
-- 'Profiles' will take you to all the profiles. You can click on a profile to see queens that user has favorited.
+- 'Profiles' will take you to all the profiles. You can click on a profile to see queens that the user has favorited.
 - Enjoy!
 
 ## What the App Looks Like:
