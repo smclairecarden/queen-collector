@@ -1,7 +1,14 @@
 body {
+  --profile-bg: white;
+  --card--bg: aqua;
   font-family: 'Fjalla One', sans-serif;
-  background-color: var(--body-bg);
+  background-color: var(--profile-bg);
   color: var(--light-n-dark-text-clr);
+}
+
+body.dark {
+  --profile-bg: black;
+  --card--bg: grey;
 }
 
 main {
@@ -44,7 +51,7 @@ h2 {
   display: grid;
   color: hotpink;
   border-radius: 10%;
-  background-color: var(--body-bg);
+  background-color: var(--card--bg);
   text-align: center;
 }
 

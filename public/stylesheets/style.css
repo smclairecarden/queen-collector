@@ -12,6 +12,8 @@ body {
   --light-n-dark-btn-content: "Dark Mode";
   --light-n-dark-btn-bg: white;
   --light-n-dark-text-clr: black;
+  --nav-text-color: white;
+  --welcome-bg: white;
   background-color: var(--body-bg);
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: 'Fjalla One', sans-serif;
@@ -25,6 +27,8 @@ body.dark {
   --light-n-dark-btn-content: "Light Mode";
   --light-n-dark-btn-bg: gray;
   --light-n-dark-text-clr: white;
+  --nav-text-color: gray;
+  --welcome-bg: gray;
 }
 
 #lightNDark {
@@ -58,7 +62,7 @@ nav > a {
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
-  color: white;
+  color: var(--nav-text-color);
 }
 
 nav > a:hover {
@@ -73,7 +77,7 @@ button {
 }
 
 .welcome-message {
-  background-color: white;
+  background-color: var(--welcome-bg);
   margin-top: 10%;
   margin-bottom: 50%;
   margin-left: auto;
