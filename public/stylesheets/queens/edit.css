@@ -30,7 +30,7 @@ label {
 }
 
 body {
-  background-color: aqua;
+  background-color: var(--body-bg);
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: 'Fjalla One', sans-serif;
   margin: 0;

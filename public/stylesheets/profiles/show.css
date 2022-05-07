@@ -42,7 +42,7 @@ h2 {
   display: grid;
   color: hotpink;
   border-radius: 10%;
-  background-color: aqua;
+  background-color: var(--body-bg);
   text-align: center;
 }
 

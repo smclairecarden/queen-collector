@@ -1,6 +1,8 @@
 body {
   margin: 0 auto;
   font-family: 'Fjalla One', sans-serif;
+  background-color: var(--body-bg);
+  color: var(--light-n-dark-text-clr);
 }
 
 .card-body {

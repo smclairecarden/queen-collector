@@ -8,12 +8,33 @@ html {
 }
 
 body {
-  background-color: aqua;
+  --body-bg: aqua;
+  --light-n-dark-btn-content: "Dark Mode";
+  --light-n-dark-btn-bg: white;
+  --light-n-dark-text-clr: black;
+  background-color: var(--body-bg);
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: 'Fjalla One', sans-serif;
   margin: 0;
   justify-content: center;
   margin: 0 auto;
+}
+
+body.dark {
+  --body-bg: black;
+  --light-n-dark-btn-content: "Light Mode";
+  --light-n-dark-btn-bg: gray;
+  --light-n-dark-text-clr: white;
+}
+
+#lightNDark {
+  background-color: var(--light-n-dark-btn-bg);
+  color: var(--light-n-dark-text-clr);
+}
+
+#lightNDark::after {
+  color: var(--light-n-dark-text-clr);
+  content: var(--light-n-dark-btn-content);
 }
 
 main {

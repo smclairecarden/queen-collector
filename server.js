@@ -25,6 +25,7 @@ import { router as profilesRouter } from './routes/profiles.js'
 // create the express app
 const app = express()
 
+
 // view engine setup
 app.set(
   'views',
@@ -42,6 +43,8 @@ app.use(
     path.join(path.dirname(fileURLToPath(import.meta.url)), 'public')
   )
 )
+app.use(express.static('public'))
+
 
 // session middleware
 app.use(
@@ -84,5 +87,7 @@ app.use(function (err, req, res, next) {
     title: `🎊 ${err.status || 500} Error`,
   })
 })
+
+
 
 export { app }
