@@ -1,4 +1,8 @@
 const body = document.querySelector('body')
+const lightNDarkBtn = document.querySelector('#lightNDark')
+lightNDarkBtn.addEventListener('click', toggleLightDark)
+
+
 function toggleLightDark() {
   body.className = body.className === "dark" ? "" : "dark"
 }

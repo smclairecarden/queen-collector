@@ -1,5 +1,7 @@
 body {
   font-family: 'Fjalla One', sans-serif;
+  background-color: var(--body-bg);
+  color: var(--light-n-dark-text-clr);
 }
 
 main {
