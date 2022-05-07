@@ -1,17 +1,35 @@
 const body = document.querySelector('body')
 const lightNDarkBtn = document.querySelector('#lightNDark')
-lightNDarkBtn.addEventListener('click', toggleLightDark)
 
+let dark = localStorage.getItem('dark')
 
-function toggleLightDark() {
-  body.className = body.className === "dark" ? "" : "dark"
+const enableDarkMode = () => {
+  // 1. Add the class to the body
+  document.body.classList.add('dark');
+  // 2. Update darkMode in localStorage
+  localStorage.setItem('dark', 'enabled');
 }
 
-function checkDarkPref() {
-  if(window.matchMedia("(prefers-color-scheme:dark)").matches && body.className !== "dark")
-  {
-    toggleLightDark()
-  }
-} 
+const disableDarkMode = () => {
+  // 1. Remove the class from the body
+  document.body.classList.remove('dark');
+  // 2. Update darkMode in localStorage 
+  localStorage.setItem('dark', null);
+}
 
-checkDarkPref()
+if (dark === 'enabled') {
+  enableDarkMode();
+}
+
+lightNDarkBtn.addEventListener('click', () => {
+  // get their darkMode setting
+  darkMode = localStorage.getItem('dark'); 
+  
+  // if it not current enabled, enable it
+  if (dark !== 'enabled') {
+    enableDarkMode();
+  // if it has been enabled, turn it off  
+  } else {  
+    disableDarkMode(); 
+  }
+});
