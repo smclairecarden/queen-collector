@@ -117,3 +117,22 @@ h2 {
   color: hotpink;
   font-size: 1.5rem;
 }
+
+@media only screen and (max-width: 768px) {
+  body > nav {
+    font-size: small;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .add-queen {
+    margin: 4%;
+    font-size: .75rem;
+  }
+
+  .all-queens {
+    margin: 5% auto;
+    font-size: .75rem;
+  }
+}
