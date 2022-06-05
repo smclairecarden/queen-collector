@@ -14,7 +14,7 @@ body {
   --light-n-dark-text-clr: black;
   --nav-text-color: white;
   --welcome-bg: white;
-  background-color: var(--body-bg);
+  background-color: var(--body-bg) !important;
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: 'Fjalla One', sans-serif;
   margin: 0;
@@ -23,7 +23,7 @@ body {
 }
 
 body.dark {
-  --body-bg: black;
+  --body-bg: black; 
   --light-n-dark-btn-content: "Light Mode";
   --light-n-dark-btn-bg: gray;
   --light-n-dark-text-clr: white;
@@ -122,7 +122,6 @@ h2 {
   body > nav {
     font-size: small;
     justify-content: center;
-    margin: 5px;
     padding: 5px;
   }
 
@@ -134,5 +133,9 @@ h2 {
   .all-queens {
     margin: 5% auto;
     font-size: .75rem;
+  }
+
+  #lightNDark {
+    font-size: small;
   }
 }

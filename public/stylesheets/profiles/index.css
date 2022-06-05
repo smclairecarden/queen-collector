@@ -1,11 +1,20 @@
 body {
+  --profile-bg: white;
   margin: 0 auto;
   font-family: 'Fjalla One', sans-serif;
+  --card--bg: lightpink;
+  font-family: 'Fjalla One', sans-serif;
+  background-color: var(--profile-bg) !important;
+}
+
+body.dark {
+  --profile-bg: black;
+  --card--bg: grey;
 }
 
 .card-body {
   text-align: center;
-  background-color: lightpink;
+  background-color: var(--card--bg);
 }
 
 .card-title {
@@ -15,5 +24,4 @@ body {
 
 .card-img-top {
   border-radius: 50%;
-  background-color: lightpink;
 }
