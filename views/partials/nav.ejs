@@ -19,9 +19,10 @@
     href="/queens" <%- title === 'All Queens' ? 'class="active"' : '' %>
     >ALL QUEENS</a>
     <a href="/auth/logout">
-      <button type="submit">Logout</button>
+      Logout
     </a>
-    <button id="lightNDark"></button>
+    <!-- <button id="lightNDark"></button> -->
+    <p id="lightNDark"></p>
     <% } else { %>
     <a 
       href="/queens" <%- title === 'All Queens' ? 'class="active"' : '' %>
@@ -30,7 +31,8 @@
         <button type="submit" class="siwg">
           <img id="siwg-image" alt="Sign in with Google" />
         </button>
-        <button id="lightNDark"></button>
+        <!-- <button id="lightNDark"></button> -->
       </a>
+      <p id="lightNDark"></p>
     <% } %>
   </nav>

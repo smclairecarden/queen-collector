@@ -32,7 +32,6 @@ body.dark {
 }
 
 #lightNDark {
-  background-color: var(--light-n-dark-btn-bg);
   color: var(--light-n-dark-text-clr);
 }
 
