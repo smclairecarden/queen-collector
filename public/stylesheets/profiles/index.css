@@ -4,7 +4,7 @@ body {
   font-family: 'Fjalla One', sans-serif;
   --card--bg: lightpink;
   font-family: 'Fjalla One', sans-serif;
-  background-color: var(--profile-bg) !important;
+  background-color: var(--profile-bg);
 }
 
 body.dark {
@@ -23,5 +23,5 @@ body.dark {
 }
 
 .card-img-top {
-  border-radius: 50%;
+  background-color: var(--card--bg);
 }

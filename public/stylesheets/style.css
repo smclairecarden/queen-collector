@@ -56,15 +56,16 @@ body > nav {
   font-size: 15px;
 }
 
-nav > a {
+nav > a, #lightNDark {
   margin: 15px;
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
   color: var(--nav-text-color);
+  text-transform: uppercase;
 }
 
-nav > #lightNDark a:hover {
+nav > a:hover {
   color: slateblue;
   }
 
