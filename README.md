@@ -40,7 +40,6 @@
 - A page where users can sort the queens by seasons.
 - A page for Queens who have not appeared on Drag Race.
 - Add to Favorites Button change to 'Added to Favorites' when the button has been clicked.
-- Light/Dark Mode
 
 ## Credits:
 - Favicon: [RuPaul](https://images.app.goo.gl/xruNuLnjJWt5527P6)
